@@ -13,7 +13,7 @@ public class TextoDelimitado {
 
 
     public Product escribirLeerTexto(Product producto) throws IOException {
-        String datosGrabdos = null;
+        String datosGrabdos;
         PrintWriter printF = new PrintWriter("/home/dam2a/Escritorio/AD/Prueba/productos2.txt");
         BufferedReader bufeF = new BufferedReader(new FileReader("/home/dam2a/Escritorio/AD/Prueba/productos2.txt"));
         for (int i = 0; i < cod.length; i++) {
