@@ -4,23 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
+
 
 public class TextoDelimitado {
     String[] cod = {"p1", "p2", "p3"};
     String[] descripcion = {"parafusos", "cravos", "tachas"};
     Double[] prezo = {3.0, 4.0, 5.0};
 
-
-    @Override
-    public String toString() {
-        return
-                Arrays.toString(cod) +
-                        Arrays.toString(descripcion) +
-                        Arrays.toString(prezo);
-
-
-    }
 
     public Product escribirLeerTexto(Product producto) throws IOException {
         String datosGrabdos = null;
