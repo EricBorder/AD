@@ -1,12 +1,8 @@
-package ProductStream;
+package Serializacion2;
 
+import java.io.*;
 
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-
-public class Product {
+public class Product2 implements Serializable {
     private String codigo;
     private String descripcion;
     private int prezo;
@@ -14,7 +10,7 @@ public class Product {
     String[] desc = {"parafusos", "cravos ", "tachas"};
     int[] precio = {3, 4, 5};
 
-    public Product() {
+    public Product2() {
         this.codigo = "";
         this.descripcion = "";
         this.prezo = 0;
@@ -22,7 +18,7 @@ public class Product {
     }
 
 
-    public Product(String codigo, String descripcion, int prezo) {
+    public Product2(String codigo, String descripcion, int prezo) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.prezo = prezo;
@@ -57,7 +53,7 @@ public class Product {
         return codigo + descripcion + (int) prezo;
     }
 
-    public Product[] escribirValores(File file, Product[] productos) throws IOException {
+    public Product2[] escribirValores(File file, Product2[] productos) throws IOException {
         for (int i = 0; i < productos.length; i++) {
             if (productos[i] == null) {
                 productos[i] = null;
@@ -80,4 +76,7 @@ public class Product {
         }
         inputF.close();
     }
+
+
+
 }
